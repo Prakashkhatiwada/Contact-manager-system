@@ -1,6 +1,3 @@
-CREATE DATABASE IF NOT EXISTS cmsproject;
-USE cmsproject;
-
 -- Table for users
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
