@@ -1,0 +1,449 @@
+/* Modal Background */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    padding-top: 60px;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Elements */
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #218838;
+}
+
+/* Switch Form Links */
+.auth-form p {
+    font-size: 14px;
+}
+
+.auth-form p span {
+    color: #28a745;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.auth-form p span:hover {
+    text-decoration: underline;
+}
+
+/* Add Transition for Smooth Effect */
+.auth-form {
+    transition: all 0.3s ease;
+}
+
+/* Registration Form */
+.register-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 5% auto;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #0056b3;
+}
+
+.register-form p {
+    font-size: 14px;
+}
+
+.register-form p span {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.register-form p span:hover {
+    text-decoration: underline;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #28a745;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column; /* Change to column to stack content and images */
+    align-items: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    position: relative; /* Add position relative for overlay */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 50%;
+    padding: 20px;
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #218838;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 20%; /* Adjust to full width */
+    flex-wrap: wrap;
+    margin-top: 20px; /* Add margin to separate from hero content */
+}
+
+.hero-image-left, .hero-image-right {
+    width: 10%;
+    padding: 10px;
+}
+
+/* Hero Section Image Hover Effect */
+.hero-image-left img, .hero-image-right img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  /* Pointer cursor to show interactivity */
+    transition: transform 0.3s ease;  /* Smooth zoom effect */
+}
+
+/* Hero Image Hover Effect */
+.hero-image-left img:hover, .hero-image-right img:hover {
+    transform: scale(1.1);  /* Zoom in the image on hover */
+}
+
+/* Features Section */
+#features {
+    background-color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column; /* Change to column to stack features */
+    align-items: center; /* Center align items */
+    gap: 20px; /* Add space between features */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-item {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item i {
+    font-size: 50px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+}
+
+/* About Section */
+#about {
+    background-color: #f4f4f4;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Add Bootstrap Integration */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-images {
+        flex-direction: column;
+    }
+    .feature-list {
+        flex-direction: column;
+    }
+    .feature-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        width: 95%;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .feature-item h3 {
+        font-size: 1.2rem;
+    }
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme .bg-light {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-theme .bg-white {
+    background-color: #2c2c2c !important;
+}
+
+body.dark-theme .text-center {
+    color: #e0e0e0;
+}
+
+body.dark-theme .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+body.dark-theme .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+body.dark-theme .btn-dark {
+    background-color: #333;
+    border-color: #333;
+}
+
+body.dark-theme .btn-dark:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+body.dark-theme table {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+body.dark-theme table th {
+    background-color: #3c3c3c;
+}
+
+body.dark-theme table td {
+    background-color: #2c2c2c;
+}
+
+body.dark-theme .form-control {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark-theme .form-control:focus {
+    background-color: #3c3c3c;
+    color: #e0e0e0;
+    border-color: #007bff;
+}
+
+body.dark-theme .bg-dark {
+    background-color: #1c1c1c !important;
+}
+
+body.dark-theme .btn {
+    background-color: #444444;
+    color: white;
+}
+
+body.dark-theme .btn:hover {
+    background-color: #555555;
+}
+
+body.dark-theme footer {
+    background-color: #1c1c1c;
+}
+
+
